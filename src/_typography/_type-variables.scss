@@ -1,0 +1,32 @@
+:root {
+    // 1 Create font stacks
+
+    // 1.1 Serif
+    --font-stack-humanist: Centaur, 'Centaur MT', 'Centaur MT Std', var(--font-stack-garalde);
+    --font-stack-garalde: 'Palatino Linotype', 'Palatino LT STD', Palatino, 'Book Antiqua', 'Iowan Old Style', 'Hoefler Text', Garamond, 'Goudy Old Style', var(--font-stack-transitional);
+    --font-stack-transitional: Baskerville, Perpetua, 'Linux Libertine', 'Times New Roman', Times, 'Nimbus Roman No9 L', 'Nimbus Roman No9 L Regular', var(--font-stack-modern);
+    --font-stack-modern: Didot, 'Didot LT STD', Bodoni, 'Bodoni MT', 'Bodoni 72', serif;
+    --font-stack-clarendon: 'Bitstream Charter', Charter, 'Source Serif Pro', 'Source Serif', 'Century Schoolbook', Georgia, var(--font-stack-slab);
+    --font-stack-slab: Rockwell, var(--font-stack-neo-grotesque);
+    --font-stack-glyphic: Optima, 'Linux Biolinum', Trajan, 'Liberation Serif', var(--font-stack-humanist);
+
+    // 1.2 Sanserif
+    --font-stack-humanist-sans: 'Fira Sans', 'Gill Sans', Optima, Verdana, var(--font-stack-neohumanist-sans);
+    --font-stack-neohumanist-sans: Myriad, Ubuntu, Oxygen-Sans, Cantarell, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Segoe UI', var(--font-stack-grotesque);
+    --font-stack-grotesque: 'Source Sans Pro', 'Source Sans', 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', var(--font-stack-neo-grotesque);
+    --font-stack-neo-grotesque: system-ui, -apple-system, BlinkMacSystemFont, Roboto, DIN, Geneva, 'Helvetica Neue', Helvetica, 'Liberation Sans', Noto, Arial, sans-serif;
+    --font-stack-geometric: 'Avenir Next', Avenir, Futura, 'Proxima Nova', 'Century Gothic', var(--font-stack-neo-grotesque);
+
+    // 1.3 Monospace & emoji
+    --font-stack-neohumanist-mono: 'Fira Code', 'Fira Mono', 'Ubuntu Mono', Consolas, 'Lucida Console', Menlo, Monaco, var(--font-stack-grotesque-mono);
+    --font-stack-grotesque-mono: 'Source Code Pro', 'Source Code', var(--font-stack-neo-grotesque-mono);
+    --font-stack-neo-grotesque-mono: 'SF Mono', 'Roboto Mono', 'Courier New', monospace;
+    --font-stack-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+
+    // 2 Assign roles
+    --font-stack-text: var(--font-family-text, NULL), var(--font-family-text-fallback), var(--font-stack-emoji);
+    --font-stack-headings: var(--font-family-headings, NULL), var(--font-family-headings-fallback), var(--font-stack-emoji);
+    --font-stack-mono: var(--font-family-monospace, NULL), var(--font-family-monospace-fallback), var(--font-stack-emoji);
+    --font-stack-ui: var(--font-family-ui, NULL), var(--font-family-ui-fallback), var(--font-stack-emoji);
+}

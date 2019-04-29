@@ -1,0 +1,23 @@
+// BREAKPOINTS
+// Breakpoints use em units in order to get consistent browser behavior.
+// See: https://zellwk.com/blog/media-query-units
+$break-xs: 25.875em; // ~414px
+$break-sm: 48em; // ~768px
+$break-md: 67.5em; // ~1080px
+$break-lg: 90em; // ~1440px
+$break-xl: 120em; // ~1920px
+
+:root {
+    // 1 Font sizes
+    @for $i from 0 through 5 {
+        --font-size-#{$i}: calc(var(--type-scale-#{$i}) * 1em);
+    }
+
+    // 2 Sizes
+    @for $i from 0 through 5 {
+        --size-#{$i}: calc(var(--size-scale-#{$i}) * 1em);
+    }
+}
+
+// Headings
+$heading-levels: 3 !default; // supports integers 1–6

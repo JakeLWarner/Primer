@@ -1,0 +1,76 @@
+// SIZE RESET
+html {
+	font-size: 62.5%; // Sets 1rem==10px
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+// RESPONSIVENESS
+body {
+	font-size: 2rem;
+	font-size: calc(var(--unit-size) * 0.75); // Must be rem
+	transition: font-size 1s;
+	@include breakpoint(xs) {
+		font-size: 1.5rem;
+		font-size: calc(var(--unit-size) * 0.75);
+	}
+	@include breakpoint(sm) {
+		font-size: 1.75rem;
+		font-size: calc(var(--unit-size) * 0.875);
+	}
+	@include breakpoint(md) {
+		font-size: 2rem;
+		font-size: var(--unit-size);
+	}
+	@include breakpoint(lg) {
+		font-size: 2.25rem;
+		font-size: calc(var(--unit-size) * 1.125);
+	}
+	@include breakpoint(xl) {
+		font-size: 2.5rem;
+		font-size: calc(var(--unit-size) * 1.25);
+	}
+}
+
+
+// FONT SIZE HELPERS
+
+// Couple font-size and line-height for font-size-# variables
+@for $i from 0 through 5 {
+	%font-size-#{$i} {
+		font-size: var(--font-size-#{$i});
+		line-height: var(--line-height-#{$i});
+	}
+}
+
+// Couple font-size and line-height for headings
+@for $i from 1 through 6 {
+	@if $heading-levels == 6 {
+		%font-size-h#{$i} {
+			font-size: var(--font-size-#{$heading-levels - $i});
+			line-height: 1.125;
+			line-height: var(--line-height-#{$heading-levels - $i});
+		}
+	}
+	@else if $heading-levels < 6 and $i >= 1 and $i <= $heading-levels {
+		%font-size-h#{$i} {
+			font-size: var(--font-size-#{$heading-levels - $i + 1});
+			line-height: 1.25;
+			line-height: var(--line-height-#{$heading-levels - $i + 1});
+		}
+	}
+	@else {
+		%font-size-h#{$i} {
+			font-size: var(--font-size-0);
+			line-height: 1.5;
+			line-height: var(--line-height-0);
+		}
+	}
+}
+
+img {
+    max-width: 100%;
+}

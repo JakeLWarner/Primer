@@ -1,0 +1,84 @@
+:root {
+    // 1 BASE COLORS
+
+    // 1.1 Opinionated Defaults
+
+    --green: #3c763d;
+    --green-light-1: #83AC84;
+    --green-light-2: #CCDFCD;
+    --green-dark-1: #285E29;
+    --green-dark-2: #174218;
+
+    --yellow: #f1d302;
+    --yellow-light-1: #FFEB60;
+    --yellow-light-2: #FFFABF;
+    --yellow-dark-1: #BFA700;
+    --yellow-dark-2: #807500;
+
+    --red: #990000;
+    --red-light-1: #C56060;
+    --red-light-2: #EABFBF;
+    --red-dark-1: #730000;
+    --red-dark-2: #4D0000;
+
+    --blue: #336699;
+    --blue-light-1: #7C9FC3;
+    --blue-light-2: #C9D9E9;
+    --blue-dark-1: #224D78;
+    --blue-dark-2: #133353;
+
+    // 1.2 Grayscale
+    --gray-5: #f0f0f0;
+    --gray-10: #e8e8e8;
+    --gray-20: #d3d3d3;
+    --gray-30: #bebebe;
+    --gray-40: #a9a9a9;
+    --gray-50: #989898;
+    --gray-60: #808080;
+    --gray-70: #707070;
+    --gray-80: #585858;
+    --gray-90: #404040;
+    --gray-95: #333333;
+
+
+    // 2 PROJECT COLORS
+
+    // 2.1 Semantic
+    --color-success: var(--green);
+    --color-warning: var(--yellow);
+    --color-danger: var(--red);
+    --color-info: var(--blue);
+
+    // 2.2 Brand
+    --color-main: var(--green);
+    --color-main-light-1: var(--green-light-1);
+    --color-main-light-2: var(--green-light-2);
+    --color-main-dark-1: var(--green-dark-1);
+    --color-main-dark-2: var(--green-dark-2);
+
+    --color-accent: var(--blue);
+    --color-accent-light-1: var(--blue-light-1);
+    --color-accent-light-2: var(--blue-light-2);
+    --color-accent-dark-1: var(--blue-dark-1);
+    --color-accent-dark-2: var(--blue-dark-2);
+
+    // 2.3 Layout
+    --color-bg: white;
+    --color-bg-dark-1: var(--gray-10);
+
+    // 2.4 Type
+    --color-text: var(--gray-90);
+    --color-text-link: var(--color-accent);
+    --color-text-link-hover: var(--color-accent-dark-2);
+
+    // 2.5 Buttons
+    --color-button-main: var(--color-main);
+    --color-button-main-hover: var(--color-main-light-1);
+    --color-button-main-border: var(--color-main-dark-1);
+    --color-button-main-text: white;
+
+    --color-button-accent: var(--color-accent);
+    --color-button-accent-hover: var(--color-accent-dark-1);
+    --color-button-accent-border: var(--color-accent-dark-1);
+    --color-button-accent-text: white;
+}

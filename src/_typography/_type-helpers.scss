@@ -1,0 +1,106 @@
+@mixin figures($figures:'onum') {
+	@if $figures == 'lnum' {
+		font-variant-numeric: lining-nums;
+		-moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'lnum';
+		-ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'lnum';
+		-webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'lnum';
+		font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'lnum';
+	}
+	@else if $figures == 'onum' {
+		font-variant-numeric: oldstyle-nums;
+		-moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum';
+		-ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum';
+		-webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum';
+		font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum';
+	}
+	@else if $figures == 'pnum' {
+		font-variant-numeric: proportional-nums;
+		-moz-font-feature-settings: 'pnum';
+		-ms-font-feature-settings: 'pnum';
+		-webkit-font-feature-settings: 'pnum';
+		font-feature-settings: 'pnum';
+	}
+	@else if $figures == 'tnum' {
+		font-variant-numeric: tabular-nums;
+		-moz-font-feature-settings: 'tnum';
+		-ms-font-feature-settings: 'tnum';
+		-webkit-font-feature-settings: 'tnum';
+		font-feature-settings: 'tnum';
+	}
+	@else if $figures == 'frac' {
+		font-variant-numeric: diagonal-fractions;
+		-moz-font-feature-settings: 'frac';
+		-ms-font-feature-settings: 'frac';
+		-webkit-font-feature-settings: 'frac';
+		font-feature-settings: 'frac';
+	}
+	@else if $figures == 'ordn' {
+		font-variant-numeric: ordinal;
+		-moz-font-feature-settings: 'ordn';
+		-ms-font-feature-settings: 'ordn';
+		-webkit-font-feature-settings: 'ordn';
+		font-feature-settings: 'ordn';
+	}
+	@else {
+		@warn 'Figures mixin supports: lnum, onum, pnum, tnum, frac, ordn';
+	}
+}
+
+@mixin ligatures($ligatures:'clig') {
+	@if $ligatures == 'clig' {
+		font-variant-ligatures: common-ligatures, contextual;
+		font-variant-numeric: oldstyle-nums;
+		-moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum';
+		-ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum';
+		-webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum';
+		font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum';
+	}
+	@else if $ligatures == 'dlig' {
+		font-variant-ligatures: discretionary-ligatures;
+		font-variant-numeric: oldstyle-nums;
+		-moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'dlig', 'onum';
+		-ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'dlig', 'onum';
+		-webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'dlig', 'onum';
+		font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'dlig', 'onum';
+	}
+	@else if $ligatures == 'swsh' {
+		font-variant-numeric: oldstyle-nums;
+		-moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'dlig', 'swsh', 'onum';
+		-ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'dlig', 'swsh', 'onum';
+		-webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'dlig', 'swsh', 'onum';
+		font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'dlig', 'swsh', 'onum';
+	}
+	@else {
+		@warn 'Ligatures mixin supports: clig, dlig, swsh';
+	}
+}
+
+%small-caps {
+	font-variant-caps: all-small-caps;
+	font-variant-numeric: lining-nums;
+	-moz-font-feature-settings: 'c2sc', 'smcp', 'lnum';
+    -ms-font-feature-settings: 'c2sc', 'smcp', 'lnum';
+    -webkit-font-feature-settings: 'c2sc', 'smcp', 'lnum';
+    font-feature-settings: 'c2sc', 'smcp', 'lnum';
+    letter-spacing: 0.05em;
+}
+%hyphenate {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+%suppress-hyphens {
+    overflow-wrap: normal;
+    word-wrap: normal;
+    -ms-word-break: normal;
+    word-break: normal;
+    -ms-hyphens: none;
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+}
